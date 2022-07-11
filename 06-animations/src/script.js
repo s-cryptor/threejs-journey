@@ -16,8 +16,8 @@ scene.add(mesh)
 
 // Sizes
 const sizes = {
-    width: 800,
-    height: 600
+  width: 800,
+  height: 600
 }
 
 // Camera
@@ -27,7 +27,7 @@ scene.add(camera)
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+  canvas: canvas
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.render(scene, camera)
@@ -41,17 +41,17 @@ const clock = new THREE.Clock()
 
 // Animations
 const tick = () => {
-    // Clock
-    const elapsedTime = clock.getElapsedTime()
+  // Clock
+  const elapsedTime = clock.getElapsedTime()
 
-    // Update object
-    camera.position.y = Math.sin(elapsedTime)
-    camera.position.x = Math.cos(elapsedTime)
-    camera.lookAt(mesh.position)
+  // Update object
+  camera.position.y = Math.sin(elapsedTime)
+  camera.position.x = Math.cos(elapsedTime)
+  camera.lookAt(mesh.position)
 
-    // Render
-    renderer.render(scene, camera)
-    window.requestAnimationFrame(tick)
+  // Render
+  renderer.render(scene, camera)
+  window.requestAnimationFrame(tick)
 }
 
 tick()
