@@ -1,4 +1,8 @@
-// import './style.css'
+import './style.css';
+import App from './App/App.js';
+
+const app = new App(document.querySelector('canvas.webgl')); // passing down canvas
+
 // import * as THREE from 'three'
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 // import * as dat from 'lil-gui'
